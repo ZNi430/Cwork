@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char s[21];
+	while(scanf("%s",s)!=EOF){
+		int len=strlen(s);
+		for(int i=len-1;i>=0;i--){
+			if(s[i]=='b'){
+				printf("q");
+			}
+			if(s[i]=='d'){
+				printf("p");
+			}
+			if(s[i]=='f'){
+				printf("f");
+			}
+			if(s[i]=='h'){
+				printf("y");
+			}
+			if(s[i]=='l'){
+				printf("l");
+			}
+			if(s[i]=='m'){
+				printf("w");
+			}
+			if(s[i]=='n'){
+				printf("u");
+			}
+			if(s[i]=='o'){
+				printf("o");
+			}
+			if(s[i]=='s'){
+				printf("s");
+			}
+			if(s[i]=='x'){
+				printf("x");
+			}
+			if(s[i]=='z'){
+				printf("z");
+			}
+			if(s[i]=='1'){
+				printf("1");
+			}
+			if(s[i]=='2'){
+				printf("2");
+			}
+			if(s[i]=='6'){
+				printf("9");
+			}
+			if(s[i]=='8'){
+				printf("8");
+			}
+			if(s[i]=='q'){
+				printf("b");
+			}
+			if(s[i]=='p'){
+				printf("d");
+			}
+			if(s[i]=='y'){
+				printf("h");
+			}
+			if(s[i]=='w'){
+				printf("m");
+			}
+			if(s[i]=='u'){
+				printf("n");
+			}
+			if(s[i]=='9'){
+				printf("6");
+			}
+		}
+		printf("\n");
+	}
+}
