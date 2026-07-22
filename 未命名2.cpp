@@ -1,11 +1,25 @@
 #include<stdio.h>
-#include <stdlib.h>
-int main(){
-	int a,b;
-	int d;
-	scanf("%d %d",&a,&b);
-	scanf("%d",&d);
-	for(int i=0;i<d;i++){
-		printf("%d %d\n",i%a+1,i%b+1);
+#include<string.h>
+char pre[1005];
+char in[1005];
+
+void solve(int prel,int prer,int inl,int inr){
+	if(prel>prer)return ;
+	char root=pre[prel];
+	int k;
+	for(k=inl;k<=inr;k++){
+		if(in[k]==root){
+			break;
+		}
 	}
-} 
+	int numleft=k-inl;
+	solve(prel+1,prel+numleft,inl,k-1);
+	solve(prel+numleft+1,prer,k+1,inr);
+	printf("%c",root);
+}
+int main(){
+	scanf("%s",pre);
+	scanf("%s",in);
+	int len =strlen(pre);
+	solve(0,len-1,0,len-1);
+}
